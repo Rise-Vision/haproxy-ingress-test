@@ -31,4 +31,8 @@ Note that the haproxy-ingress file is mostly identical to the one in the
 For detail on the rate limiting, search for *stick-table* in the yaml files and
 refer to the [Introduction to HAProxy Stick Tables].
 
+The [Ingress Controller 1.5 announcement] gives additional detail on this
+functionality.
+
 [Introduction to HAProxy Stick Tables]: https://www.haproxy.com/blog/introduction-to-haproxy-stick-tables/
+[Ingress Controller 1.5 announcement]: https://www.haproxy.com/blog/announcing-haproxy-kubernetes-ingress-controller-1-5/
