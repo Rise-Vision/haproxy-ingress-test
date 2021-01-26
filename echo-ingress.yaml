@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: echo-ingress
+  annotations:
+    haproxy.org/path-rewrite: "/"
+    haproxy.org/backend-config-snippet: |
+      stick-table type binary size 10000 store http_req_rate(300000)
+      http-request track-sc0 url32
+      http-request deny if { url32,table_http_req_rate() gt 10 }
+spec:
+  ingressClassName: haproxy
+  rules:
+  - http:
+      paths:
+        - path: /echo
+          backend:
+            serviceName: echo-service
+            servicePort: 8080
