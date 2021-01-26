@@ -25,3 +25,10 @@ Note that the haproxy-ingress file is mostly identical to the one in the
 
 [http-request]: https://cbonte.github.io/haproxy-dconv/1.9/configuration.html#4.2-http-request
 [installation documentation]: https://www.haproxy.com/documentation/kubernetes/latest/installation/community/google/
+
+### Rate Limiting Details
+
+For detail on the rate limiting, search for *stick-table* in the yaml files and
+refer to the [Introduction to HAProxy Stick Tables].
+
+[Introduction to HAProxy Stick Tables]: https://www.haproxy.com/blog/introduction-to-haproxy-stick-tables/
